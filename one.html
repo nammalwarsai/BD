@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Jaswanth 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+}
+
+.container {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+.cake {
+    font-size: 70px;
+    margin: 20px 0;
+    animation: bounce 1.5s infinite;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #ff6f61;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background: #ff3b2f;
+}
+
+.message {
+    margin-top: 20px;
+    display: none;
+}
+
+/* Gift section */
+.gifts {
+    display: none;
+    margin-top: 30px;
+}
+
+.gift-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.gift {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gift:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.4);
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>🎉 Happy Birthday Jaswanth 🎉</h1>
+    <h3>Click below for surprises 👇</h3>
+
+    <div class="cake">🎂</div>
+
+    <button onclick="showMessage()">Message 💌</button>
+    <button onclick="showGifts()">Open Gifts 🎁</button>
+
+    <div class="message" id="msg">
+        <p>
+            Dear Jaswanth,<br><br>
+            You are my brother and my best friend.<br>
+            May your life be full of happiness and success ❤️
+        </p>
+    </div>
+
+    <!-- Gifts Section -->
+    <div class="gifts" id="gifts">
+        <h2>🎁 Your Gifts 🎁</h2>
+
+        <div class="gift-grid">
+            <div class="gift" onclick="openGift('🎧 Wireless Earbuds')">🎧</div>
+            <div class="gift" onclick="openGift('⌚ Smart Watch')">⌚</div>
+            <div class="gift" onclick="openGift('🎮 Gaming Gear')">🎮</div>
+            <div class="gift" onclick="openGift('🎵 Speaker')">🎵</div>
+            <div class="gift" onclick="openGift('👕 Custom T-Shirt')">👕</div>
+            <div class="gift" onclick="openGift('🍫 Chocolate Box')">🍫</div>
+            <div class="gift" onclick="openGift('📸 Photo Frame')">📸</div>
+            <div class="gift" onclick="openGift('💌 Special Letter')">💌</div>
+        </div>
+    </div>
+</div>
+
+<script>
+function showMessage() {
+    document.getElementById("msg").style.display = "block";
+}
+
+function showGifts() {
+    document.getElementById("gifts").style.display = "block";
+}
+
+function openGift(giftName) {
+    alert(giftName + "\n\n😄 Next birthday I will get back to you!");
+}
+</script>
+
+</body>
+</html>
